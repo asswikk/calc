@@ -1,0 +1,241 @@
+* {
+    box-sizing: border-box; /* Устанавливает модель расчета размеров 
+ 				    элементов так, чтобы padding и border 
+					включались в общую ширину и высоту */
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, 
+    			     Geneva, 
+    			     Verdana, 
+			     sans-serif; /* Устанавливает шрифт для всей страницы */
+    background: linear-gradient(110deg, 
+    				#75EAB2, 
+				#007541); /* Устанавливает градиентный фон 
+								под углом 110 градусов */
+    display: flex; /* Включает флексбокс для выравнивания содержимого */
+    align-items: center; /* Центрирует содержимое по вертикали */
+    justify-content: center; /* Центрирует содержимое по горизонтали */
+    height: 100vh; /* Высота body — вся высота окна браузера */
+    margin: 0; /* Убирает внешние отступы */
+}
+
+form {
+    display: flex; /* Используем флекс-контейнер */
+    flex-direction: column; /* Расположение дочерних элементов вертикально */
+}
+
+label {
+    margin-bottom: 0.5rem; /* Отступ снизу от надписи */
+    font-weight: 600; /* Полужирное начертание */
+    color: #cfcfcf; /* Цвет текста — светло-серый */
+}
+
+input[type="text"],
+input[type="password"] {
+    padding: 0.75rem 1rem; /* Внутренние отступы сверху/снизу и по бокам */
+    margin-bottom: 1.2rem; /* Отступ снизу между полями */
+    border: 1px solid #ccc; /* Светло-серая рамка */
+    border-radius: 10px; /* Скруглённые углы полей */
+    font-size: 1rem; /* Размер шрифта */
+    transition: 0.3s; /* Плавное изменение при фокусе */
+}
+input[type="text"]:focus,
+input[type="password"]:focus {
+    border-color: #b3b3b3; /* Изменение цвета рамки при фокусе */
+    outline: none; /* Убираем стандартную обводку браузера */
+    box-shadow: 0 0 7px rgba(92, 157, 237, 0.5); /* Светящаяся рамка вокруг поля */
+}
+
+input[type="submit"] {
+    background-color: #424242; /* Тёмно-серый фон кнопки */
+    color: white; /* Белый текст */
+    padding: 0.75rem; /* Внутренние отступы */
+    border: none; /* Без рамки */
+    border-radius: 10px; /* Скруглённые углы */
+    font-size: 1.2rem; /* Размер текста */
+    cursor: pointer; /* Изменение курсора на "руку" */
+    transition: background-color 0.3s ease; /* Плавное изменение цвета фона */
+    min-width: 300px;    /* Фиксированная минимальная ширина */
+    min-height: 45px;    /* Фиксированная минимальная высота */
+    display: inline-flex; /* Для лучшего контроля */
+    justify-content: center; /* Центрирование текста */
+    align-items: center;
+    white-space: nowrap; /* Запрет переноса текста */
+}
+
+input[type="submit"]:hover {
+    background-color: #6b6b6b; /* Цвет кнопки при наведении */
+}
+
+.login-container {
+    background-color: #2b2b2b; /* Белый фон контейнера */
+    padding: 2rem 3rem; /* Внутренние отступы: 2rem сверху/снизу, 3rem слева/справа */
+    border-radius: 20px; /* Скруглённые углы */
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2); /* Тень для создания объема */
+    width: 100%; /* Ширина по умолчанию — 100% */
+    max-width: 400px; /* Максимальная ширина — 400px */
+}
+.login-container h2 {
+    text-align: center; /* Выравнивание заголовка по центру */
+    margin-bottom: 1.5rem; /* Отступ снизу */
+    color: #b3b3b3; /* Цвет текста — светло-серый */
+    text-shadow: 0 0 8px black; /* Тень */
+}
+
+.list-form {
+    width: 90%; /* займет всю ширину родителя */
+    box-sizing: border-box;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 8px;
+    background: #b0b0b0;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+.list-form h2 {
+    text-align: left;
+    margin-bottom: 1.5rem; /* Отступ снизу */
+    color: #424242; /* Цвет текста — светло-серый */
+}
+
+.list-container h1 {
+    text-align: center; /* Выравнивание заголовка по центру */
+    margin-bottom: 1.5rem; /* Отступ снизу */
+    color: #b3b3b3; /* Цвет текста — светло-серый */
+    text-shadow: 0 0 8px black; /* Тень */
+}
+
+.radio-box-form {
+    max-width: 200px;
+    max-height: 50px;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 8px;
+    background: #454545;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.radio-form {
+    max-width: 300px;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 8px;
+    background: #424242;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.radio-option {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.radio-custom {
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    border: 2px solid #555;
+    border-radius: 50%;
+    margin-right: 10px;
+    position: relative;
+}
+
+input[type="radio"] {
+    display: none; /* Скрываем стандартный radio */
+}
+
+input[type="radio"]:checked + .radio-custom::after {
+    content: "";
+    display: block;
+    width: 10px;
+    height: 10px;
+    background: gold;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.radio-label {
+    color: #b3b3b3;
+    font-size: 16px;
+    text-shadow: 0 0 1px black; /* Тень */
+
+}
+
+.radio-option:hover .radio-custom {
+  border-color: gold;
+}
+
+.list-container {
+    background-color: #2b2b2b; /* Тёмно-серый фон контейнера */
+    padding: 2rem 3rem; /* Внутренние отступы: 2rem сверху/снизу, 3rem слева/справа */
+    border-radius: 20px; /* Скруглённые углы */
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2); /* Тень для создания объема */
+    width: 100%; /* Ширина по умолчанию — 100% */
+    max-width: 600px; /* Максимальная ширина — 400px */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto; /* Центрирование самого контейнера на странице */
+}
+.list-container h3 {
+    text-align: center; /* Выравнивание заголовка по центру */
+    margin-bottom: 1.5rem; /* Отступ снизу */
+    color: #b3b3b3; /* Цвет текста — светло-серый */
+    text-shadow: 0 0 8px black; /* Тень */
+}
+.list-container input[type="text"],
+input[type="elements"] {
+    padding: 0.75rem 1rem; /* Внутренние отступы сверху/снизу и по бокам */
+    margin-bottom: 1.2rem; /* Отступ снизу между полями */
+    border: 1px solid #ccc; /* Светло-серая рамка */
+    border-radius: 10px; /* Скруглённые углы полей */
+    font-size: 1rem; /* Размер шрифта */
+    transition: 0.3s; /* Плавное изменение при фокусе */
+}
+.list-container input[type="text"]:focus,
+input[type="elements"]:focus {
+    border-color: #b3b3b3; /* Изменение цвета рамки при фокусе */
+    outline: none; /* Убираем стандартную обводку браузера */
+    box-shadow: 0 0 7px rgba(92, 157, 237, 0.5); /* Светящаяся рамка вокруг поля */
+}
+
+
+/* Общий контейнер для сообщений */
+.message {
+    padding: 1.7rem 2.1rem; /* Внутренние отступы */
+    margin: 1.5rem auto; /* Вертикальные отступы и автоматическое центрирование */
+    border-radius: 10px; /* Скруглённые углы */
+    max-width: 400px; /* Максимальная ширина */
+    font-size: 1.7rem; /* Размер текста */
+    font-weight: 700; /* Жирное начертание */
+    text-align: center; /* Центрирование текста */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Тень вокруг */
+    animation: fadeIn 0.5s ease-in-out; /* Анимация появления */
+}
+
+/* Сообщение об ошибке */
+.message-error {
+    background-color: #140000; /* Светло-красный фон */
+    color: #b91c1c; /* Тёмно-красный текст */
+    border: 1px solid #f5c2c0; /* Рамка красного цвета */
+}
+/* Анимация появления */
+@keyframes fadeIn {
+    from {
+	opacity: 0; /* Полная прозрачность */
+	transform: translateY(-8px); /* Подъём вверх */
+   } to {
+	opacity: 1; /* Полная видимость */
+	transform: translateY(0); /* Возврат к исходной позиции */
+   }
+}

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Список</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="list-container">
+        <h1>Создать список</h1>
+	<form method="POST" action="/list">
+            <label for="elements">Элементы списка:</label>
+            <input type="text" id="elements" name="elements" required>
+
+            <div class="radio-form">
+                <label class="radio-label">Выбор операции</label>
+
+                <div class="radio-box-form">
+                    <label class="radio-option">
+                        <input type="radio" id="type1" name="type_list" value="1" checked>
+                        <span class="radio-custom"></span>
+                        <span class="radio-label">Сложение</span>
+                    </label>
+                </div>
+
+                <div class="radio-box-form">
+                    <label class="radio-option">
+                        <input type="radio" id="type1" name="type_list" value="2" checked>
+                        <span class="radio-custom"></span>
+                        <span class="radio-label">Вычитание</span>
+                    </label>
+                </div>
+
+                <div class="radio-box-form">
+                    <label class="radio-option">
+                        <input type="radio" id="type1" name="type_list" value="3" checked>
+                        <span class="radio-custom"></span>
+                        <span class="radio-label">Умножение</span>
+                    </label>
+                </div>
+
+                <div class="radio-box-form">
+                    <label class="radio-option">
+                        <input type="radio" id="type2" name="type_list" value="4">
+                        <span class="radio-custom"></span>
+                        <span class="radio-label">Деление</span>
+                    </label>
+                </div>
+            </div>
+
+            <input type="submit" value="Передать">
+        </form>
+    </div>
+</body>
+</html>
